@@ -10,5 +10,8 @@
     "start": "cd services && npm run start",
     "build": "cd services && npm run build",
     "serve": "cd services && npm run serve"
+  },
+  "engines": {
+    "node": "10.16.1"
   }
 }
