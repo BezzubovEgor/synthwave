@@ -1,7 +1,5 @@
-function getIndex(req, res, next) {
-    res.render('index', { title: 'Express' });
+async function getIndex(req, res, next) {
+  res.render('index', { title: 'Express' });
 }
 
-export {
-    getIndex,
-}
+export { getIndex };
