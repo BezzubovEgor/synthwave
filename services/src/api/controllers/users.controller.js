@@ -1,4 +1,4 @@
-function getUsers(req, res, next) {
+function getUsers(req, res) {
   res.send('respond with a resource');
 }
 

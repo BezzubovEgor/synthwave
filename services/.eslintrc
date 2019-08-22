@@ -1,7 +1,9 @@
 {
     "extends": "airbnb-base",
     "rules": {
-        "no-console": 0
+        "no-console": 0,
+        "no-use-before-define": 0,
+        "import/prefer-default-export": 0
     },
     "plugins": ["babel"],
     "parser": "babel-eslint"

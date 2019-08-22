@@ -1,4 +1,4 @@
-async function getIndex(req, res, next) {
+async function getIndex(req, res) {
   res.render('index', { title: 'Express' });
 }
 
