@@ -10,7 +10,8 @@
     "start": "cd services && npm run start",
     "build": "cd services && npm run build",
     "serve": "cd services && npm run serve",
-    "heroku-prebuild": "cd services && npm install --only=dev"
+    "preinstall": "cd services && npm i",
+    "heroku-prebuild": "cd services && npm i --only=dev"
   },
   "engines": {
     "node": "10.16.1"
