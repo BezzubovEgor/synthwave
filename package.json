@@ -9,7 +9,8 @@
   "scripts": {
     "start": "cd services && npm run start",
     "build": "cd services && npm run build",
-    "serve": "cd services && npm run serve"
+    "serve": "cd services && npm run serve",
+    "heroku-prebuild": "npm install --only=dev"
   },
   "engines": {
     "node": "10.16.1"
