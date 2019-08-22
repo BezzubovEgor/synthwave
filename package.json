@@ -1,0 +1,10 @@
+{
+  "name": "synthwave",
+  "version": "0.0.1",
+  "description": "new music service",
+  "main": "index.js",
+  "repository": "https://github.com/BezzubovEgor/synthwave.git",
+  "author": "ybezzubau",
+  "license": "MIT",
+  "private": false
+}
