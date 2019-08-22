@@ -2,9 +2,13 @@
   "name": "synthwave",
   "version": "0.0.1",
   "description": "new music service",
-  "main": "index.js",
   "repository": "https://github.com/BezzubovEgor/synthwave.git",
   "author": "ybezzubau",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "scripts": {
+    "start": "cd services && npm run start",
+    "build": "cd services && npm run build",
+    "serve": "cd services && npm run serve"
+  }
 }
