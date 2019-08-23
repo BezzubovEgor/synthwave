@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        Synthwave app admin
+        Synthwave app admin (this content only for test)
       </header>
     </div>
   );
