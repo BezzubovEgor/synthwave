@@ -1,49 +1,36 @@
 import createDebug from 'debug';
 import http from 'http';
 import app from 'app';
+import { PORT } from '@config';
+import logger from '@logger';
 
 const debug = createDebug('services:server');
-const port = normalizePort(process.env.PORT || '3000');
 
-app.set('port', port);
+app.set('port', PORT);
 
 const server = http.createServer(app);
 
-server.listen(port);
+server.listen(PORT);
 server.on('error', onError);
 server.on('listening', onListening);
 
-
-function normalizePort(val) {
-  const parsedPort = parseInt(val, 10);
-
-  if (Number.isNaN(parsedPort)) {
-    return val;
-  }
-
-  if (parsedPort >= 0) {
-    return parsedPort;
-  }
-
-  return false;
-}
 
 function onError(error) {
   if (error.syscall !== 'listen') {
     throw error;
   }
 
-  const bind = typeof port === 'string'
-    ? `Pipe ${port}`
-    : `Port ${port}`;
+  const bind = typeof PORT === 'string'
+    ? `Pipe ${PORT}`
+    : `Port ${PORT}`;
 
   switch (error.code) {
     case 'EACCES':
-      console.error(`${bind} requires elevated privileges`);
+      logger.error(`${bind} requires elevated privileges`);
       process.exit(1);
       break;
     case 'EADDRINUSE':
-      console.error(`${bind} is already in use`);
+      logger.error(`${bind} is already in use`);
       process.exit(1);
       break;
     default:
@@ -56,5 +43,6 @@ function onListening() {
   const bind = typeof addr === 'string'
     ? `pipe ${addr}`
     : `port ${addr.port}`;
+  logger.info(`Listening on ${bind}`);
   debug(`Listening on ${bind}`);
 }

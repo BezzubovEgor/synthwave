@@ -16,6 +16,7 @@
                 "root": ["./src"],
                 "alias": {
                     "@api": "./src/api",
+                    "@logger": "./src/api/services/logger.service.js",
                     "@controllers": "./src/api/controllers",
                     "@middlewares": "./src/api/middlewares",
                     "@models": "./src/api/models",
