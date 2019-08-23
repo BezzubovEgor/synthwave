@@ -1,6 +1,6 @@
 import createDebug from 'debug';
 import http from 'http';
-import app from './app';
+import app from 'app';
 
 const debug = createDebug('services:server');
 const port = normalizePort(process.env.PORT || '3000');

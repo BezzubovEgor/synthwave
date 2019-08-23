@@ -1,5 +1,6 @@
 import createError from 'http-errors';
 
+
 function handle404(req, res, next) {
   next(createError(404));
 }

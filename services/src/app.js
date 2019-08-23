@@ -4,11 +4,11 @@ import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import sassMiddleware from 'node-sass-middleware';
 
-import router from './api/routes';
 import {
   handle404,
   handleErrorAndShowErrorPage,
-} from './api/middlewares/error-handlers';
+} from '@middlewares/error-handlers';
+import router from '@routes';
 
 const app = express();
 const saas = sassMiddleware({
