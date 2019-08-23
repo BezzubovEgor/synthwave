@@ -15,7 +15,9 @@
     "build:admin": "cd admin && cross-env PUBLIC_URL=/admin npm run build",
     "copy:admin": "cpx admin/build/**/* services/dist/assets/admin -C",
     "serve": "cd services && npm run serve",
-    "preinstall": "cd services && npm i",
+    "preinstall": "run-s install:**",
+    "install:services": "cd services && npm i",
+    "install:admin": "cd admin && npm i",
     "heroku-prebuild": "cd services && npm i --only=dev"
   },
   "engines": {
